@@ -12,6 +12,7 @@ public class HelloWorld {
         });
         
         get("/health", (request, response) -> {
+            response.header("Content-Type", "application/json");
             return "{" +
                     "\"status\": \"UP\", " +
                     "\"description\": \"VECI Ansible Java role test app\" " +
